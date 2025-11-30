@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 
-const UserForm = ({ onSave, editingUser, onCancelEdit }) => {
+const UserForm = ({ onSave, editingUser, onCancelEdit, resetToken }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
@@ -13,7 +13,7 @@ const UserForm = ({ onSave, editingUser, onCancelEdit }) => {
     }
     setName('');
     setEmail('');
-  }, [editingUser]);
+  }, [editingUser, resetToken]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -15,6 +15,7 @@ import './App.css';
 function App() {
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
+  const [formResetToken, setFormResetToken] = useState(0);
   const [feedback, setFeedback] = useState({
     open: false,
     message: '',
@@ -56,6 +57,7 @@ function App() {
       });
 
       setEditingUser(null);
+      setFormResetToken((value) => value + 1);
       loadUsers();
     } catch (error) {
       setFeedback({
@@ -77,6 +79,10 @@ function App() {
         message: 'Usuário removido com sucesso.',
         type: 'success',
       });
+      if (editingUser?.id === id) {
+        setEditingUser(null);
+        setFormResetToken((value) => value + 1);
+      }
       loadUsers();
     } catch (error) {
       setFeedback({
@@ -106,11 +112,12 @@ function App() {
       <Grid container spacing={3} justifyContent="center">
         <Grid item xs={12} md={5}>
           <div className="app-card">
-            <UserForm
-              onSave={handleSave}
-              editingUser={editingUser}
-              onCancelEdit={() => setEditingUser(null)}
-            />
+          <UserForm
+            onSave={handleSave}
+            editingUser={editingUser}
+            onCancelEdit={() => setEditingUser(null)}
+            resetToken={formResetToken}
+          />
           </div>
         </Grid>
         <Grid item xs={12} md={7}>

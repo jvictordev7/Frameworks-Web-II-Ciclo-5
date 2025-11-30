@@ -49,9 +49,10 @@ const UserList = ({ users = [], onEdit, onDelete }) => (
               <TableCell>{user.email}</TableCell>
               <TableCell align="right">
                 <Button
-                  variant="outlined"
+                  variant="contained"
+                  color="primary"
                   size="small"
-                  sx={{ mr: 1, borderColor: 'rgba(255,255,255,0.25)', color: '#e5e7eb' }}
+                  sx={{ mr: 1 }}
                   onClick={() => onEdit(user)}
                 >
                   Editar
