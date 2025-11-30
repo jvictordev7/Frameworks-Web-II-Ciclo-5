@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 214, 165, 0.45), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(167, 200, 255, 0.35), transparent 25%),
+    linear-gradient(120deg, #f6f7fb, #f4f6ff 50%, #fdfcfb);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}

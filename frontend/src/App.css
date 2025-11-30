@@ -1,0 +1,66 @@
+.app-shell {
+  padding: 48px 0 64px;
+}
+
+.app-card {
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.08),
+    0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-title {
+  letter-spacing: -0.02em;
+  font-weight: 700 !important;
+  color: #0f172a;
+}
+
+.app-subtitle {
+  color: #4b5563;
+  margin-top: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #7dd3fc, #818cf8);
+  color: #0b1020;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.muted {
+  color: #6b7280 !important;
+}
+
+.table-head {
+  background: #f8fafc;
+}
+
+.table-row:hover {
+  background: #f3f4f6;
+}
+
+.cta-btn {
+  background: linear-gradient(120deg, #22d3ee, #6366f1);
+  color: #ffffff;
+  font-weight: 700;
+}
